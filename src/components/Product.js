@@ -3,7 +3,8 @@ import React, { useState } from "react";
 // Components
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
-
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/basketSlice";
 // Constants
 const MIN_PRODUCT_RATING = 1;
 const MAX_PRODUCT_RATING = 5;
@@ -17,6 +18,23 @@ function Product({ id, title, price, description, category, image }) {
   );
 
   const { hasPrime } = useState(Math.random);
+  const dispatch = useDispatch();
+
+  // Add Function
+  const addItemToCart = () => {
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+
+      // TODO:Add has prime & rating
+    };
+
+    dispatch(addToCart(product));
+  };
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10">
       {/* Product Category */}
@@ -49,12 +67,19 @@ function Product({ id, title, price, description, category, image }) {
       {/* Prime */}
       {/* {hasPrime && ( */}
       <div className="flex flex-row items-center space-x-2 -mt-5">
-        <img src="https://links.papareact.com/fdw" alt="" className="w-12" />
+        <img
+          loading="lazy"
+          src="https://links.papareact.com/fdw"
+          alt=""
+          className="w-12"
+        />
         <p className="text-xs text-gray-500">Next Day Delivery</p>
       </div>
       {/* )} */}
 
-      <button className="mt-auto button">Add to Cart</button>
+      <button className="mt-auto button" onClick={addItemToCart}>
+        Add to Cart
+      </button>
     </div>
   );
 }
