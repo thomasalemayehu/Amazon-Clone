@@ -9,7 +9,7 @@ export default function Home({ allProducts }) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Amazon</title>
       </Head>
 
       {/* Header */}
@@ -18,20 +18,20 @@ export default function Home({ allProducts }) {
       <main className="max-w-screen-2xl mx-auto">
         <Banner />
 
-        <ProductsFeed allProducts={allProducts} />
+        {/* <ProductsFeed allProducts={allProducts} /> */}
       </main>
     </div>
   );
 }
 
-export async function getServerSideProps(context) {
-  const allProducts = await fetch(
-    "https://fakestoreapi.com/products?limit=19"
-  ).then((res) => res.json());
+// export async function getServerSideProps(context) {
+//   const allProducts = await fetch(
+//     "https://fakestoreapi.com/products?limit=19"
+//   ).then((res) => res.json());
 
-  return {
-    props: {
-      allProducts,
-    },
-  };
-}
+//   return {
+//     props: {
+//       allProducts,
+//     },
+//   };
+// }

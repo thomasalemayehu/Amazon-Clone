@@ -1,5 +1,11 @@
 import React from "react";
 
+// Auth
+import { signIn, signOut, useSession } from "next-auth/react";
+
+// Router
+import { useRouter } from "next/router";
+
 // Components
 import Image from "next/image";
 import {
@@ -9,6 +15,9 @@ import {
 } from "@heroicons/react/outline";
 
 function Header() {
+  const { data: session } = useSession();
+  const router = useRouter();
+
   return (
     <header>
       {/* Top Header */}
@@ -22,6 +31,7 @@ function Header() {
             height={40}
             objectFit="contain"
             className="cursor-pointer"
+            onClick={() => router.push("/")}
           />
         </div>
 
@@ -37,8 +47,8 @@ function Header() {
         {/* Util Section */}
         <div className="text-white flex items-center text-xs  space-x-6 mx-6 whitespace-nowrap">
           {/* Intro */}
-          <div className="link">
-            <p>Hello Thomas Alex</p>
+          <div className="link" onClick={!session ? signIn : signOut}>
+            <p>{session ? `Hello ${session.user.name}` : "Sign In"}</p>
             <p className="font-extrabold md:text-sm">Accounts & List</p>
           </div>
 
@@ -49,7 +59,10 @@ function Header() {
           </div>
 
           {/* Cart */}
-          <div className="relative flex items-center link">
+          <div
+            className="relative flex items-center link"
+            onClick={() => router.push("/checkout")}
+          >
             {/* Counter */}
             <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
               6
