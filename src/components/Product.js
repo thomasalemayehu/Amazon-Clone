@@ -6,6 +6,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/basketSlice";
 import Currency from "react-currency-formatter";
+
 // Constants
 const MIN_PRODUCT_RATING = 1;
 const MAX_PRODUCT_RATING = 5;
@@ -37,7 +38,7 @@ function Product({ id, title, price, description, category, image }) {
     dispatch(addToCart(product));
   };
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10">
+    <div className="relative flex flex-col m-5 bg-white z-30 p-10 custom__product__card">
       {/* Product Category */}
       <p className="absolute top-2 right-2 text-grey-400 italic text-xs capitalize">
         {category}
