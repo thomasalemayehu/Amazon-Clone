@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 import { addToCart, removeFromCart } from "../slices/basketSlice";
+import Currency from "react-currency-formatter";
 
 function CheckoutProduct({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
@@ -47,7 +48,9 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
         <p className="text-xs my-2 line-clamp-3">{description}</p>
 
         {/* Price */}
-        <h6>ETB {price}</h6>
+        <h6>
+          <Currency quantity={price * 55} currency="ETB" />
+        </h6>
 
         {/* Prime */}
         <div className="flex w items-center space-x-2">

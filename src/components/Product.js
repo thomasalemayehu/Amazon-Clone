@@ -5,6 +5,7 @@ import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/basketSlice";
+import Currency from "react-currency-formatter";
 // Constants
 const MIN_PRODUCT_RATING = 1;
 const MAX_PRODUCT_RATING = 5;
@@ -59,9 +60,10 @@ function Product({ id, title, price, description, category, image }) {
       {/* Description */}
       <p className="text-xs my-2 line-clamp-2">{description}</p>
 
-      {/* TODO:Make Currency */}
       {/* Price */}
-      <div className="mb-5">ETB {price}</div>
+      <div className="mb-5">
+        <Currency quantity={price * 55} currency="ETB" />
+      </div>
 
       {/* TODO:Make Prime Dynamic */}
       {/* Prime */}
