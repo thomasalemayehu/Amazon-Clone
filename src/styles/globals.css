@@ -9,6 +9,9 @@
   .button {
     @apply p-2 text-xs md:text-sm bg-gradient-to-t from-yellow-200 to-yellow-400 border-none rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 active:from-yellow-500;
   }
+  .footer-link {
+    @apply text-sm py-1 hover:underline;
+  }
 }
 
 /* Product Card Animation */
