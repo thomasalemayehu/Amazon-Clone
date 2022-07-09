@@ -22,7 +22,7 @@ function Header() {
   const itemsInCart = useSelector(selectItems);
 
   return (
-    <header className="fixed z-30 w-full">
+    <header className="fixed z-40 w-full">
       {/* Top Header */}
       <div className="flex items-center bg-amazon_blue p-1 py-2 flex-grow">
         {/* Image */}
