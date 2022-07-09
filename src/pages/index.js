@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 // Components
 import Header from "../components/Header";
 import ProductsFeed from "../components/ProductsFeed";
+import { getSession } from "next-auth/react";
 
 export default function Home({ allProducts }) {
   return (
@@ -25,6 +26,7 @@ export default function Home({ allProducts }) {
 }
 
 export async function getServerSideProps(context) {
+  const session = await getSession(context);
   // const allProducts = await fetch(
   //   "https://fakestoreapi.com/products?limit=19"
   // ).then((res) => res.json());
