@@ -31,8 +31,21 @@ function Banner() {
           <img loading="lazy" src="/images/Banner/Banner-Image-2.jpg" alt="" />
         </div>
 
-        {/* TODO:Add More Images */}
-        {/* <div></div> */}
+        <div>
+          <img loading="lazy" src="/images/Banner/Banner-Image-3.jpg" alt="" />
+        </div>
+
+        <div>
+          <img loading="lazy" src="/images/Banner/Banner-Image-4.jpg" alt="" />
+        </div>
+
+        <div>
+          <img loading="lazy" src="/images/Banner/Banner-Image-5.jpg" alt="" />
+        </div>
+
+        <div>
+          <img loading="lazy" src="/images/Banner/Banner-Image-6.jpg" alt="" />
+        </div>
       </Carousel>
     </div>
   );
