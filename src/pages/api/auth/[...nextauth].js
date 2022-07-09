@@ -42,7 +42,7 @@ export default NextAuth({
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      return "http://localhost:3000";
+      return process.env.HOST;
     },
   },
 });
