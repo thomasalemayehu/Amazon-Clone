@@ -20,16 +20,15 @@ function Banner() {
       >
         {/* Images */}
         <div>
-          {/* TODO:Make Local Image */}
-          <img loading="lazy" src="https://links.papareact.com/gi1" alt="" />
+          <img loading="lazy" src="/images/Banner/Banner-Image.jpg" alt="" />
         </div>
+
         <div>
-          {/* TODO:Make Local Image */}
-          <img loading="lazy" src="https://links.papareact.com/6ff" alt="" />
+          <img loading="lazy" src="/images/Banner/Banner-Image-1.jpg" alt="" />
         </div>
+
         <div>
-          {/* TODO:Make Local Image */}
-          <img loading="lazy" src="https://links.papareact.com/7ma" alt="" />
+          <img loading="lazy" src="/images/Banner/Banner-Image-2.jpg" alt="" />
         </div>
 
         {/* TODO:Add More Images */}
