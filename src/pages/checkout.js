@@ -2,16 +2,18 @@ import React from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+import { selectItems, selectTotal } from "../slices/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(process.env.stripe_public_key);
+import Currency from "react-currency-formatter";
 // Auth
 import { useSession } from "next-auth/react";
 import axios from "axios";
 
 function Checkout() {
   const itemsInCart = useSelector(selectItems);
+  const totalPrice = useSelector(selectTotal);
   const { data: session } = useSession();
 
   // Checkout function
@@ -72,12 +74,15 @@ function Checkout() {
         </div>
 
         {/* Checkout Section */}
-        <div className="flex flex-col bg-white p-10 shadow-md">
+        <div className=" ">
           {itemsInCart.length > 0 && (
-            <>
+            <div className="shadow-md p-10 flex flex-col bg-white h-full">
               <h2 className="whitespace-nowrap">
-                SubTotal ({itemsInCart.length}):
-                <span className="font-bold">ETB</span>
+                Subtotal ({itemsInCart.length} items):
+                <span className="font-bold">
+                  {" "}
+                  <Currency quantity={totalPrice} currency="ETB" />
+                </span>
               </h2>
 
               <button
@@ -91,7 +96,7 @@ function Checkout() {
               >
                 {!session ? "Sign in to checkout" : "Checkout"}
               </button>
-            </>
+            </div>
           )}
         </div>
       </main>

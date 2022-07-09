@@ -30,7 +30,7 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
   // Add Remove Function
   const removeItemFromCart = () => {
     dispatch(removeFromCart({ id }));
-    console.log("removing");
+    toast.error(`${title} removed from cart!`);
   };
   return (
     <div className="grid grid-cols-5">
