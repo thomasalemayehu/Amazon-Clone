@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 
 import { addToCart, removeFromCart } from "../slices/basketSlice";
 import Currency from "react-currency-formatter";
+import { toast } from "react-toastify";
 
 function CheckoutProduct({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
@@ -23,11 +24,13 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
     };
 
     dispatch(addToCart(product));
+    toast.success(`${title} added to cart!`);
   };
 
   // Add Remove Function
   const removeItemFromCart = () => {
-    dispatch(removeFromCart(id));
+    dispatch(removeFromCart({ id }));
+    console.log("removing");
   };
   return (
     <div className="grid grid-cols-5">

@@ -21,8 +21,8 @@
 }
 .custom__product__card:hover {
   transform: scale(1.055);
-  -webkit-transform: scale(1.0565);
-  -moz-transform: scale(1.0565);
-  -ms-transform: scale(1.0565);
-  -o-transform: scale(1.0565);
+  -webkit-transform: scale(1.055);
+  -moz-transform: scale(1.055);
+  -ms-transform: scale(1.055);
+  -o-transform: scale(1.055);
 }

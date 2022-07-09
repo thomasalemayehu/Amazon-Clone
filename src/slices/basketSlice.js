@@ -19,7 +19,7 @@ export const basketSlice = createSlice({
       let newCart = [...state.items];
 
       if (indexOfItem >= 0) {
-        newCart.splice(index, 1);
+        newCart.splice(indexOfItem, 1);
       }
 
       state.items = newCart;
