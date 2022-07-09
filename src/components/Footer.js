@@ -1,12 +1,12 @@
 import React from "react";
 import { signIn, useSession } from "next-auth/react";
 
-function Footer() {
+function Footer({ showLoginModal = true }) {
   const { data: session } = useSession();
   return (
     <div>
       {/* Login */}
-      {!session && (
+      {!session && showLoginModal === true && (
         <div className="py-10 text-center border border-gray-400 my-10">
           <p className="text-sm mb-1">See personalized recommendations</p>
           <button className="button w-64 font-bold" onClick={signIn}>
