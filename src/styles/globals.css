@@ -13,16 +13,16 @@
 
 /* Product Card Animation */
 .custom__product__card {
-  transition: 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  -webkit-transition: 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  -moz-transition: 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  -ms-transition: 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  -o-transition: 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -webkit-transition: 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -moz-transition: 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -ms-transition: 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -o-transition: 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .custom__product__card:hover {
-  transform: scale(1.075);
-  -webkit-transform: scale(1.075);
-  -moz-transform: scale(1.075);
-  -ms-transform: scale(1.075);
-  -o-transform: scale(1.075);
+  transform: scale(1.055);
+  -webkit-transform: scale(1.0565);
+  -moz-transform: scale(1.0565);
+  -ms-transform: scale(1.0565);
+  -o-transform: scale(1.0565);
 }
