@@ -6,6 +6,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/basketSlice";
 import Currency from "react-currency-formatter";
+import { toast } from "react-toastify";
 
 // Constants
 const MIN_PRODUCT_RATING = 1;
@@ -36,6 +37,7 @@ function Product({ id, title, price, description, category, image }) {
     };
 
     dispatch(addToCart(product));
+    toast.success(`${title} added to cart!`);
   };
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10 custom__product__card">
