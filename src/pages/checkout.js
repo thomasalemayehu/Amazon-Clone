@@ -42,10 +42,9 @@ function Checkout() {
       <main className="lg:flex max-w-screen-2xl mx-auto">
         {/* Preview Section */}
         <div className="flex-grow m-5 shadow-sm">
-          {/* TODO:Make Local Image */}
           {/* Ad Image */}
           <Image
-            src="https://links.papareact.com/ikj"
+            src="/images/Ad-1.png"
             width={1020}
             height={250}
             objectFit="contain"

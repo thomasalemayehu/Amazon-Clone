@@ -18,12 +18,8 @@ function ProductsFeed({ allProducts }) {
           />
         ))}
 
-      {/* TODO:Make Image Local */}
-      <img
-        className="md:col-span-full"
-        src="https://links.papareact.com/dyz"
-        alt=""
-      />
+      {/* Ad Image */}
+      <img className="md:col-span-full" src="/images/Ad.jpg" alt="" />
 
       <div className="md:col-span-2">
         {allProducts
@@ -55,11 +51,8 @@ function ProductsFeed({ allProducts }) {
         ))}
 
       {/* TODO:Make Image Local */}
-      <img
-        className="md:col-span-full"
-        src="https://links.papareact.com/dyz"
-        alt=""
-      />
+      {/* Ad Image */}
+      <img className="md:col-span-full" src="/images/Ad.jpg" alt="" />
     </div>
   );
 }
