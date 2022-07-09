@@ -53,7 +53,7 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
         <div className="flex w items-center space-x-2">
           <img
             loading="lazy"
-            src="https://links.papareact.com/fdw"
+            src="/images/Prime-tag-.png"
             alt=""
             className="w-12"
           />
