@@ -22,7 +22,7 @@ export default function Home({ allProducts }) {
         <ProductsFeed allProducts={allProducts} />
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

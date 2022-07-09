@@ -26,7 +26,7 @@ function Footer({ showLoginModal = true }) {
       {/* Footer */}
       <div className="bg-amazon_blue w-full">
         {/* Top */}
-        <div className="text-gray-300 flex space-x-24 py-16 px-16 sm:px-8  md:px-16 lg:px-36">
+        <div className="text-gray-300 flex  flex-wrap space-x-24 py-16 px-16 sm:px-8  md:px-16 lg:px-36">
           {/*  */}
           <div className=" w-72 py-4">
             <h6 className="text-xl font-bold mb-1">Get to Know Us</h6>
