@@ -50,10 +50,10 @@ function Header() {
         {/* Util Section */}
         <div className="text-white flex items-center text-xs  space-x-6 mx-6 whitespace-nowrap">
           {/* Intro */}
-          <div className="link" onClick={!session ? signIn : signOut}>
+          {/* <div className="link" onClick={!session ? signIn : signOut}>
             <p>{session ? `Hello ${session.user.name}` : "Sign In"}</p>
             <p className="font-extrabold md:text-sm">Accounts & List</p>
-          </div>
+          </div> */}
 
           {/* Orders */}
           <div
