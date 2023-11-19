@@ -5,7 +5,7 @@ import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/basketSlice";
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 import { toast } from "react-toastify";
 
 // Constants
@@ -65,7 +65,7 @@ function Product({ id, title, price, description, category, image }) {
 
       {/* Price */}
       <div className="mb-5">
-        <Currency quantity={price * 55} currency="ETB" />
+        <div quantity={price * 55} currency="ETB" />
       </div>
 
       {/* TODO:Make Prime Dynamic */}

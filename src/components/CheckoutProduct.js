@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 import { addToCart, removeFromCart } from "../slices/basketSlice";
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 import { toast } from "react-toastify";
 
 function CheckoutProduct({ id, title, price, description, category, image }) {
@@ -52,7 +52,7 @@ function CheckoutProduct({ id, title, price, description, category, image }) {
 
         {/* Price */}
         <h6>
-          <Currency quantity={price * 55} currency="ETB" />
+          <div quantity={price * 55} currency="ETB" />
         </h6>
 
         {/* Prime */}

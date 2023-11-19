@@ -6,7 +6,7 @@ import { selectItems, selectTotal } from "../slices/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(process.env.stripe_public_key);
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 // Auth
 import { useSession } from "next-auth/react";
 import axios from "axios";
@@ -81,7 +81,7 @@ function Checkout() {
                 Subtotal ({itemsInCart.length} items):
                 <span className="font-bold">
                   {" "}
-                  <Currency quantity={totalPrice} currency="ETB" />
+                  <div quantity={totalPrice} currency="ETB" />
                 </span>
               </h2>
 
